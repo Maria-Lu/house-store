@@ -1,0 +1,14 @@
+.cart__goods-item {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 20px;
+  height: 50px;
+
+}
+
+.cart__goods-item:last-of-type {
+  margin: 0;
+}
+

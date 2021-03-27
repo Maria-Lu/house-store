@@ -1,0 +1,29 @@
+.welcome__button {
+  grid-column: 1;
+  grid-row: 2;
+  width: 50%;
+  height: 60px;
+  border-radius: 10px;
+  align-self: end;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media screen and (max-width: 768px) {
+  .welcome__button  {
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .welcome__button {
+    grid-column: 1;
+    grid-row: 3;
+    justify-self: center;
+  }
+}
+
+

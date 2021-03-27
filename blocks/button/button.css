@@ -1,0 +1,14 @@
+.button {
+  background-color: #000;
+  text-align: center;
+  color: #fff;
+  border: none;
+  text-transform: uppercase;
+  transition: .3s ease-in;
+}
+
+.button:hover {
+  cursor: pointer;
+  opacity: .7;
+}
+

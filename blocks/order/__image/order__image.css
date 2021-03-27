@@ -1,0 +1,9 @@
+.order__image {
+  width: 60%;
+}
+
+@media screen and (max-width: 768px) {
+  .order__image  {
+   width: 100%;
+  }
+}

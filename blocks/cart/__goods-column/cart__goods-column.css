@@ -1,0 +1,3 @@
+.cart__goods-column {
+  width: calc((100% - 20px)/3);
+}

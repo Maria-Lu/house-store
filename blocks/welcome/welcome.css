@@ -1,0 +1,14 @@
+.welcome {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-rows: repeat(2, min-content);
+  gap: 40px;
+}
+
+@media screen and (max-width: 660px) {
+  .welcome  {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, min-content);
+    gap: 20px;
+  }
+}

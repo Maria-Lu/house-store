@@ -1,0 +1,6 @@
+.cart__total {
+  grid-area: total;
+  margin: 0;
+  text-align: center;
+  align-self: center;
+}

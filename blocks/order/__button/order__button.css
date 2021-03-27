@@ -1,0 +1,16 @@
+.order__button {
+  width: 30%;
+  height: 60px;
+  border-radius: 10px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .order__button  {
+    width: 50%;
+    height: 50px;
+  }
+}

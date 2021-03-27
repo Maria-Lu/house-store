@@ -1,0 +1,20 @@
+.order__item-details_content_qty-price {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@media screen and (max-width: 768px) {
+  .order__item-details_content_qty-price {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .order__item-details_content_qty-price  {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}

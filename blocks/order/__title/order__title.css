@@ -1,0 +1,11 @@
+
+.order__title {
+  margin: 20px 0 60px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .order__title  {
+    margin: 20px 0 40px;
+  }
+}

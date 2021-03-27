@@ -1,0 +1,8 @@
+.cart__button_disabled {
+  opacity: 0.3;
+  color: #000;
+  background-color: #fff;
+  border: 1.5px solid #000;
+  pointer-events: none;
+  user-select: none;
+}

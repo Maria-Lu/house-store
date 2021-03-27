@@ -1,0 +1,22 @@
+.order__item {
+  margin: 0 0 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+}
+
+.order__item:last-of-type {
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .order__item  {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .order__item  {
+    width: 220px;
+  }
+}
