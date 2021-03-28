@@ -1,3 +1,5 @@
+import '../pages/order.css';
+
 import OrderElement from '../components/OrderElement.js';
 import Section from '../components/Section.js';
 

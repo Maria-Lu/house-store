@@ -3,15 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./pages/goods.css">
   <title>House shop</title>
 </head>
 <body class="page flex-container">
   <main class="content section">
-    <section class="catalog flex-container">
-      <ul class="cards catalog__cards"></ul>
+    <section class="cart flex-container">
+      <h1 class="title cart__title">Order confirmation</h1>
+      <form class="cart__form" name="order-info" action="./order.html" method="">
+        <ul class="cart__goods"></ul>
+        <input class="cart__input cart__input_type_promo text" type="text" name="promo" placeholder="Promocode">
+        <p class="cart__total text">Total: <span class="cart__total-sum"></span></p>
+        <input class="cart__input cart__input_type_name text" type="text" name="name" placeholder="Your Name" required>
+        <input class="cart__input cart__input_type_phone text" type="tel" name="phone" placeholder="Your phone" required>
+        <button class="button cart__button text" type="submit">Buy!</button>
+      </form>
       <article class="terms">
-        <h2 class="terms__title">Terms of use</h2>
+        <h3 class="terms__title">Terms of use</h2>
         <p class="terms__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing
           elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
           ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -29,20 +36,18 @@
           suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum
           iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
           vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-      </article>
+       </article>
     </section>
   </main>
-  <footer class="footer section">
-    <p class="footer__license">Illustration from <a href="https://icons8.com/illustrations" target="_blank">Icons8</a>.</p>
-  </footer>
-  <template class="card-template">
-    <li class="card catalog__card">
-      <h2 class="card__title"></h2>
-      <img class="card__image" src="./images/card/small-house1.png" alt="Small house">
-      <p class="card__price"></p>
-      <a href="./cart.html" class="button card__button"><span class="card__button-text"></span></a>
+  <template class="cart-template">
+    <li class="cart__goods-item">
+      <div class="cart__goods-container cart__goods-column">
+        <h2 class="cart__goods-title text"></h2>
+        <p class="cart__goods-price text"></p>
+      </div>
+      <span class="cart__x cart__goods-column text">X</span>
+      <input class="cart__input cart__input_type_qty cart__goods-column text" type="number" name="quantity" min="1" max="100" required>
     </li>
   </template>
-  <script type="module" src="./scripts/goods.js"></script>
 </body>
 </html>

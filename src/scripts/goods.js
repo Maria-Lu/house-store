@@ -1,28 +1,35 @@
+import '../pages/goods.css';
+
+import smallHouse1 from '../images/card/small-house1.png';
+import smallHouse2 from '../images/card/small-house2.png';
+import smallHouse3 from '../images/card/small-house3.png';
+import smallHouse4 from '../images/card/small-house4.png';
+
 import GoodsElement from '../components/GoodsElement.js';
 import Section from '../components/Section.js';
 
 const goodsElements = [
   {
     name: 'Small House1',
-    link: './images/card/small-house1.png',
+    link: smallHouse1,
     price: 100,
     id: 111
   },
   {
     name: 'Small House2',
-    link: './images/card/small-house2.png',
+    link: smallHouse2,
     price: 200,
     id: 112
   },
   {
     name: 'Small House3',
-    link: './images/card/small-house3.png',
+    link: smallHouse3,
     price: 300,
     id: 113
   },
   {
     name: 'Small House4',
-    link: './images/card/small-house4.png',
+    link: smallHouse4,
     price: 400,
     id: 114
   }

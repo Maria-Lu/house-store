@@ -1,3 +1,5 @@
+import '../pages/cart.css';
+
 import CartElement from '../components/CartElement.js';
 import Section from '../components/Section.js';
 import FormValidator from '../components/FormValidator.js';
