@@ -4,7 +4,7 @@
 .flex-container{display:flex;flex-direction:column;align-items:center;justify-content:center}
 .section{max-width:1184px;width:90%}
 .content{display:flex;justify-content:center;align-items:center}
-.button{background-color:#000;text-align:center;color:#fff;border:none;text-transform:uppercase;transition:.3s ease-in}.button:hover{cursor:pointer;opacity:.7}
+.button{background-color:#000;text-align:center;color:#fff;border:0;text-transform:uppercase;transition:.3s ease-in;padding:0}.button:hover{cursor:pointer;opacity:.5}
 .title{font-style:normal;font-weight:900;font-size:52px;line-height:68px}@media screen and (max-width:768px){.title{font-size:32px;line-height:36px}}@media screen and (max-width:425px){.title{font-size:24px;line-height:28px}}
 .text{font-style:normal;font-weight:400;font-size:24px;line-height:28px}@media screen and (max-width:768px){.text{font-size:18px;line-height:22px}}@media screen and (max-width:425px){.text{font-size:16px;line-height:18px}}
 .welcome{display:grid;grid-template-columns:1fr 1.5fr;grid-template-rows:repeat(2,-webkit-min-content);grid-template-rows:repeat(2,min-content);gap:40px}@media screen and (max-width:660px){.welcome{grid-template-columns:1fr;grid-template-rows:repeat(3,-webkit-min-content);grid-template-rows:repeat(3,min-content);gap:20px}}
