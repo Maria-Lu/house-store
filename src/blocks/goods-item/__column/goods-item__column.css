@@ -1,0 +1,4 @@
+.goods-item__column {
+  width: calc((100% - 20px)/3);
+  font-weight: 800;
+}

@@ -33,11 +33,13 @@ export default class GoodsElement extends Element {
 
   _handleButtonClick(){
     const cartItems = JSON.parse(localStorage.getItem('cart')) || {};
+
       if(cartItems.hasOwnProperty(this._id)){
         cartItems[this._id]['count'] += 1;
       }else {
         cartItems[this._id]= {count: 1, name: this._title, price: this._price, id: this._id};
       }
+
       localStorage.setItem('cart', JSON.stringify(cartItems));
   }
 

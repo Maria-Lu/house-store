@@ -6,6 +6,9 @@
 @import url(../blocks/title/title.css);
 @import url(../blocks/text/text.css);
 @import url(../blocks/content/content.css);
+@import url(../blocks/input/input.css);
+@import url(../blocks/input/_disabled/input_disabled.css);
+@import url(../blocks/input/_type/input_type_error.css);
 @import url(../blocks/terms/terms.css);
 @import url(../blocks/terms/__title/terms__title.css);
 @import url(../blocks/terms/__paragraph/terms__paragraph.css);
@@ -16,17 +19,18 @@
 @import url(../blocks/cart/__button/_disabled/cart__button_disabled.css);
 @import url(../blocks/cart/__form/cart__form.css);
 @import url(../blocks/cart/__goods/cart__goods.css);
-@import url(../blocks/cart/__input/cart__input.css);
-@import url(../blocks/cart/__input/_type/cart__input_type_qty.css);
-@import url(../blocks/cart/__input/_type/cart__input_type_name.css);
-@import url(../blocks/cart/__input/_type/cart__input_type_promo.css);
-@import url(../blocks/cart/__input/_type/cart__input_type_phone.css);
-@import url(../blocks/cart/__input/_type/cart__input_type_error.css);
-@import url(../blocks/cart/__goods-column/cart__goods-column.css);
+@import url(../blocks/goods-item/goods-item.css);
+@import url(../blocks/cart/__input-name/cart__input-name.css);
+@import url(../blocks/cart/__input-phone/cart__input-phone.css);
+@import url(../blocks/cart/__input-promo/cart__input-promo.css);
+@import url(../blocks/goods-item/__column/goods-item__column.css);
+@import url(../blocks/goods-item/__title/goods-item__title.css);
+@import url(../blocks/goods-item/__price/goods-items__price.css);
+@import url(../blocks/goods-item/__container/goods-item__container.css);
+@import url(../blocks/goods-item/__input/goods-item__input.css);
+@import url(../blocks/goods-item/__button-delete/goods-item__button-delete.css);
+
 @import url(../blocks/cart/__goods-item/cart__goods-item.css);
-@import url(../blocks/cart/__goods-title/cart__goods-title.css);
-@import url(../blocks/cart/__goods-price/cart__goods-price.css);
-@import url(../blocks/cart/__x/cart__x.css);
 
 
 

@@ -1,41 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>House shop</title>
-</head>
-<body class="page flex-container">
-  <main class="content section">
-    <section class="order flex-container">
-      <img class="order__image" src="./images/order/i-bought-a-house.png" alt="A man with a piggy bank in the house">
-      <h1 class="title order__title">Congratulation!</h1>
-      <p class="order__paragraph">You have bought <span class="order__qty"></span></p>
-      <p class="order__paragraph">Total amount: <span class="order__amount"></span></p>
-      <p class="order__paragraph">Your discount: <span class="order__discount"></span></p>
-      <p class="order__paragraph">Your order ID: <span class="order__id"></span></p>
-      <div class="order__container">
-        <p class="order__paragraph">Order details:</p>
-        <ul class="order__items"></ul>
-      </div>
-      <a href="./goods.html" class="button order__button">
-        <span class="order__button-text text">Buy more</span>
-      </a>
-    </section>
-  </main>
-  <footer class="footer section">
-    <p class="footer__license">Illustration from <a href="https://icons8.com/illustrations" target="_blank">Icons8</a>.</p>
-  </footer>
-  <template class="order-item-template">
-    <li class="order__item">
-      <div class="order__item-container">
-        <p class="order__item-details order__item-details_content_name text"></p>
-        <p class="order__item-details order__item-details_content_qty-price">
-           <span class="order__item-qty"></span> x <span class="order__item-price"></span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>House shop</title>
+  </head>
+  <body class="page flex-container">
+    <main class="content section">
+      <section class="order flex-container">
+        <img
+          class="order__image"
+          src="./images/order/i-bought-a-house.png"
+          alt="A man with a piggy bank in the house"
+        />
+        <h1 class="title order__title">Congratulation!</h1>
+        <p class="order__paragraph">
+          You have bought <span class="order__qty"></span>
         </p>
-      </div>
-      <p class="order__item-details order__item-details_content_total text"></p>
-    </li>
-  </template>
-</body>
+        <p class="order__paragraph">
+          Total amount: <span class="order__amount"></span>
+        </p>
+        <p class="order__paragraph">
+          Your discount: <span class="order__discount"></span>
+        </p>
+        <p class="order__paragraph">
+          Your order ID: <span class="order__id"></span>
+        </p>
+        <div class="order__container">
+          <p class="order__paragraph">Order details:</p>
+          <ul class="order__items"></ul>
+        </div>
+        <a href="./goods.html" class="button order__button">
+          <span class="order__button-text text">Buy more</span>
+        </a>
+      </section>
+    </main>
+    <footer class="footer section">
+      <p class="footer__license">
+        Illustration from
+        <a href="https://icons8.com/illustrations" target="_blank">Icons8</a>.
+      </p>
+    </footer>
+    <template class="order-item-template">
+      <li class="order__item">
+        <div class="order__item-container">
+          <p
+            class="order__item-details order__item-details_content_name text"
+          ></p>
+          <p class="order__item-details order__item-details_content_qty-price">
+            <span class="order__item-qty"></span> x
+            <span class="order__item-price"></span>
+          </p>
+        </div>
+        <p
+          class="order__item-details order__item-details_content_total text"
+        ></p>
+      </li>
+    </template>
+  </body>
 </html>

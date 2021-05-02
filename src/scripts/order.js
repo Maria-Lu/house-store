@@ -3,7 +3,6 @@ import '../pages/order.css';
 import OrderElement from '../components/OrderElement.js';
 import Section from '../components/Section.js';
 
-
 const orderInfo = JSON.parse(localStorage.getItem('orderInfo'));
 
 const orderAmount = document.querySelector('.order__amount');
@@ -15,40 +14,44 @@ const orderQty = document.querySelector('.order__qty');
 const orderTemplateSelector = '.order-item-template';
 const orderItemsSelector = '.order__items';
 
-if(orderInfo !== null) {
+if(orderInfo) {
 
-  const orderElements = orderInfo['items'];
+const orderElements = orderInfo['items'];
 
-  function createElement(data) {
-    const orderElement = new OrderElement(data, orderTemplateSelector);
-    const orderItemElement = orderElement.createElement();
+function createElement(data) {
+  const orderElement = new OrderElement(data, orderTemplateSelector);
+  const orderItemElement = orderElement.createElement();
 
-    return orderItemElement;
-  }
+  return orderItemElement;
+}
 
-  const orderItemList = new Section({ data: orderElements,
+const orderItemList = new Section(
+  {
+    data: orderElements,
     renderer: (element) => {
       orderItemList.setItem(createElement(element));
-    }
+    },
   },
   orderItemsSelector
-  );
+);
 
-  orderItemList.renderItems();
+orderItemList.renderItems();
 
-  function setQty(){
-    if(orderInfo['qty'] === 1) {
-      orderQty.textContent = `${orderInfo['qty']} house`
-    } else {
-      orderQty.textContent = `${orderInfo['qty']} houses`
-    }
+function setQty() {
+
+  if (orderInfo['qty'] === 1) {
+    orderQty.textContent = `${orderInfo['qty']} house`;
+  } else {
+    orderQty.textContent = `${orderInfo['qty']} houses`;
   }
 
-  setQty();
-  orderAmount.textContent = `${orderInfo['amount']}`;
-  orderDiscount.textContent = `${orderInfo['discount']}`;
-  orderId.textContent = orderInfo['id'];
+}
 
-  localStorage.clear();
+setQty();
+orderAmount.textContent = `${orderInfo['amount']}`;
+orderDiscount.textContent = `${orderInfo['discount']}`;
+orderId.textContent = orderInfo['id'];
+
+localStorage.clear();
 
 }

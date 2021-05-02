@@ -1,0 +1,5 @@
+.goods-item__input {
+  text-align: right;
+  height: 50px;
+  width: calc(100% - 45px);
+}

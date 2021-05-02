@@ -2,13 +2,14 @@
   background-color: #000;
   text-align: center;
   color: #fff;
-  border: none;
+  border: 0;
   text-transform: uppercase;
   transition: .3s ease-in;
+  padding: 0;
 }
 
 .button:hover {
   cursor: pointer;
-  opacity: .7;
+  opacity: .5;
 }
 

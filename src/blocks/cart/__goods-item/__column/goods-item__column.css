@@ -1,0 +1,3 @@
+.goods-item__column {
+  width: calc((100% - 20px)/3);
+}
