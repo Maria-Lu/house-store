@@ -22,7 +22,7 @@ const validateData = {
   inputSelector: '.input',
   submitButtonSelector: '.cart__button',
   inactiveButtonClass: 'cart__button_disabled',
-  inputErrorClass: 'input_type_error',
+  inputErrorClass: 'input_error',
   inactiveInputClass: 'input_disabled',
 };
 
@@ -30,29 +30,24 @@ const cartFormValidator = new FormValidator(validateData, cartForm);
 
 function isCartEmpty() {
   for (let key in cart) {
-
     if (cart.hasOwnProperty(key)) {
       return false;
     }
-
   }
   return true;
 }
 
 function setEmptyCart() {
-
   if (isCartEmpty()) {
     totalSum.textContent = 0;
     cartTitle.textContent = 'Your cart is empty';
     cartFormValidator.disableButton();
     cartFormValidator.disableInputs();
   }
-
 }
 
 if (cart && !isCartEmpty()) {
-
-  function getCartElements(){
+  function getCartElements() {
     return Object.values(JSON.parse(localStorage.getItem('cart')));
   }
 
@@ -69,10 +64,10 @@ if (cart && !isCartEmpty()) {
 
         if (cartFormValidator.isPromoValid()) {
           totalSum.textContent -=
-          cart[data.id]['price'] * cart[data.id]['count'] * 0.9;
+            cart[data.id]['price'] * cart[data.id]['count'] * 0.9;
         } else {
           totalSum.textContent -=
-          cart[data.id]['price'] * cart[data.id]['count'];
+            cart[data.id]['price'] * cart[data.id]['count'];
         }
 
         delete cart[data.id];
@@ -98,10 +93,10 @@ if (cart && !isCartEmpty()) {
 
   cartFormValidator.enableValidation();
 
-
   function countTotalAmount() {
     const amount = getCartElements().reduce(
-      (acc, { count, price }) => acc + count * price, 0
+      (acc, { count, price }) => acc + count * price,
+      0
     );
     return amount;
   }
@@ -114,20 +109,18 @@ if (cart && !isCartEmpty()) {
   }
 
   function applyPromo() {
-
     if (cartFormValidator.isPromoValid()) {
       totalSum.textContent = countTotalAmount() * 0.9;
     } else {
       totalSum.textContent = countTotalAmount();
     }
-
   }
 
   function checkDiscount() {
     let discount = 0;
 
     if (cartFormValidator.isPromoValid()) {
-      discount = totalSum.textContent/0.9 - totalSum.textContent;
+      discount = totalSum.textContent / 0.9 - totalSum.textContent;
     }
 
     return discount;
@@ -150,7 +143,6 @@ if (cart && !isCartEmpty()) {
   promocode.addEventListener('input', applyPromo);
 
   cartSubmitButton.addEventListener('click', handleCartSubmit);
-
 } else {
   setEmptyCart();
 }
