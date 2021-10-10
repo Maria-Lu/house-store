@@ -1,15 +1,14 @@
 .button {
-  background-color: #000;
+  background-color: #2b292d;
   text-align: center;
   color: #fff;
   border: 0;
   text-transform: uppercase;
-  transition: .3s ease-in;
+  transition: 0.3s ease-in;
   padding: 0;
 }
 
 .button:hover {
   cursor: pointer;
-  opacity: .5;
+  opacity: 0.5;
 }
-

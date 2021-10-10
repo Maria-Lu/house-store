@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>House shop</title>
   </head>
-  <body class="page flex-container">
+  <body class="page">
+    <header class="header section">
+      <a class="header__logo" href="./index.html"></a>
+      <a href="./cart.html" class="header__cart">
+        <div class="header__counter"></div>
+      </a>
+    </header>
     <main class="content section">
       <section class="cart flex-container">
         <h1 class="title cart__title">Order confirmation</h1>
@@ -64,6 +70,12 @@
         </article>
       </section>
     </main>
+    <footer class="footer section">
+      <p class="footer__license">
+        Illustration from
+        <a href="https://icons8.com/illustrations" target="_blank">Icons8</a>.
+      </p>
+    </footer>
     <template class="cart-template">
       <li class="goods-item cart__goods-item">
         <div class="goods-item__column">

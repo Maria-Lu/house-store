@@ -1,0 +1,35 @@
+.header__counter {
+  position: absolute;
+  text-align: center;
+  top: -2px;
+  right: 9px;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 25px;
+  width: 25px;
+  height: 25px;
+  background-color: #eccfd6;
+  border-radius: 50%;
+  z-index: -1;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .header__counter {
+    right: 7px;
+    font-size: 16px;
+    line-height: 22px;
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header__counter {
+    right: 6px;
+    font-size: 14px;
+    line-height: 20px;
+    width: 20px;
+    height: 20px;
+  }
+}

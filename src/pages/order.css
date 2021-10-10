@@ -1,6 +1,11 @@
 @import url(../vendor/normalize.css);
 @import url(../vendor/fonts/fonts.css);
 @import url(../blocks/page/page.css);
+@import url(../blocks/header/header.css);
+@import url(../blocks/header/__logo/header__logo.css);
+@import url(../blocks/header/__cart/header__cart.css);
+@import url(../blocks/header/__counter/header__counter.css);
+@import url(../blocks/header/__counter/_visible/header__counter_visible.css);
 @import url(../blocks/section/section.css);
 @import url(../blocks/content/content.css);
 @import url(../blocks/button/button.css);
@@ -16,13 +21,5 @@
 @import url(../blocks/order/__item-details/_content/order__item-details_content_qty-price.css);
 @import url(../blocks/order/__paragraph/order__paragraph.css);
 @import url(../blocks/order/__button/order__button.css);
+@import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__license/footer__license.css);
-
-
-
-
-
-
-
-
-

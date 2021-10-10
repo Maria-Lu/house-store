@@ -3,17 +3,18 @@
   font-weight: 900;
   font-size: 52px;
   line-height: 68px;
+  color: #2b292d;
 }
 
 @media screen and (max-width: 768px) {
-  .title  {
+  .title {
     font-size: 32px;
     line-height: 36px;
   }
 }
 
 @media screen and (max-width: 425px) {
-  .title  {
+  .title {
     font-size: 24px;
     line-height: 28px;
   }

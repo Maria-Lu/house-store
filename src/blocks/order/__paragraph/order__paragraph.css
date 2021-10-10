@@ -7,14 +7,14 @@
 }
 
 @media screen and (max-width: 768px) {
-  .order__paragraph  {
+  .order__paragraph {
     font-size: 24px;
     line-height: 28px;
   }
 }
 
 @media screen and (max-width: 425px) {
-  .order__paragraph  {
+  .order__paragraph {
     font-size: 18px;
     line-height: 22px;
   }
