@@ -3,6 +3,7 @@ import '../pages/cart.css';
 import CartElement from '../components/CartElement.js';
 import Section from '../components/Section.js';
 import FormValidator from '../components/FormValidator.js';
+import { showCartCount } from '../utils/utils';
 
 const cartGoodsSelector = '.cart__goods';
 const cartTemplateSelector = '.cart-template';
@@ -57,8 +58,8 @@ if (cart && !isCartEmpty()) {
       cartTemplateSelector,
       cart,
       applyPromo,
+      setTotalQty,
       totalSum,
-      setEmptyCart,
       function handleDeleteCard(evt) {
         evt.target.closest('.goods-item').remove();
 
@@ -72,7 +73,8 @@ if (cart && !isCartEmpty()) {
 
         delete cart[data.id];
         localStorage.setItem('cart', JSON.stringify(cart));
-        this._setEmptyCart();
+        setEmptyCart();
+        setTotalQty();
       }
     );
     const cartGoodsElement = cartElement.createElement();
@@ -106,6 +108,11 @@ if (cart && !isCartEmpty()) {
   function countTotalQty() {
     const qty = getCartElements().reduce((acc, { count }) => acc + count, 0);
     return qty;
+  }
+ 
+  function setTotalQty() {
+    showCartCount(countTotalQty());
+    localStorage.setItem('totalQty', JSON.stringify(countTotalQty()));
   }
 
   function applyPromo() {
@@ -143,6 +150,8 @@ if (cart && !isCartEmpty()) {
   promocode.addEventListener('input', applyPromo);
 
   cartSubmitButton.addEventListener('click', handleCartSubmit);
+
+  setTotalQty();
 } else {
   setEmptyCart();
 }

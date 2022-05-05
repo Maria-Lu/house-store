@@ -6,9 +6,9 @@ export default class CartElement extends Element {
     data,
     elementTemplateSelector,
     cart,
+    setTotalQty,
     applyPromo,
     totalSum,
-    setEmptyCart,
     handleDeleteCard,
   ) {
     super(elementTemplateSelector);
@@ -19,8 +19,8 @@ export default class CartElement extends Element {
     this._cart = cart;
     this._applyPromo = applyPromo;
     this._totalSum = totalSum;
-    this._setEmptyCart = setEmptyCart;
     this._handleDeleteCard = handleDeleteCard;
+    this._setTotalQty = setTotalQty;
   }
 
   createElement() {
@@ -57,6 +57,7 @@ export default class CartElement extends Element {
     this._cart[this._elementQty.dataset.id]['count'] = +this._elementQty.value;
     localStorage.setItem('cart', JSON.stringify(this._cart));
     this._applyPromo();
+    this._setTotalQty();
   }
 
 }
