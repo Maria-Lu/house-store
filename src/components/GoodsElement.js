@@ -1,4 +1,5 @@
 import Element from './Element.js';
+import { setTotalQty } from '../utils/utils.js';
 
 export default class GoodsElement extends Element {
   constructor(data, elementTemplateSelector) {
@@ -7,6 +8,7 @@ export default class GoodsElement extends Element {
     this._link = data.link;
     this._price = data.price;
     this._id = data.id
+    this._setTotalQty = setTotalQty;
   }
 
   createElement() {
@@ -31,7 +33,7 @@ export default class GoodsElement extends Element {
     this._elementButton.addEventListener('click', this._handleButtonClick.bind(this));
   }
 
-  _handleButtonClick(){
+  _handleButtonClick(evt){
     const cartItems = JSON.parse(localStorage.getItem('cart')) || {};
 
       if(cartItems.hasOwnProperty(this._id)){
@@ -41,6 +43,7 @@ export default class GoodsElement extends Element {
       }
 
       localStorage.setItem('cart', JSON.stringify(cartItems));
+      this._setTotalQty();
   }
 
 }

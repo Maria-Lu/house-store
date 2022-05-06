@@ -3,7 +3,7 @@ import '../pages/cart.css';
 import CartElement from '../components/CartElement.js';
 import Section from '../components/Section.js';
 import FormValidator from '../components/FormValidator.js';
-import { showCartCount } from '../utils/utils';
+import { getCartElements, countTotalQty, setTotalQty } from '../utils/utils';
 
 const cartGoodsSelector = '.cart__goods';
 const cartTemplateSelector = '.cart-template';
@@ -48,9 +48,6 @@ function setEmptyCart() {
 }
 
 if (cart && !isCartEmpty()) {
-  function getCartElements() {
-    return Object.values(JSON.parse(localStorage.getItem('cart')));
-  }
 
   function createElement(data) {
     const cartElement = new CartElement(
@@ -104,16 +101,6 @@ if (cart && !isCartEmpty()) {
   }
 
   totalSum.textContent = countTotalAmount();
-
-  function countTotalQty() {
-    const qty = getCartElements().reduce((acc, { count }) => acc + count, 0);
-    return qty;
-  }
- 
-  function setTotalQty() {
-    showCartCount(countTotalQty());
-    localStorage.setItem('totalQty', JSON.stringify(countTotalQty()));
-  }
 
   function applyPromo() {
     if (cartFormValidator.isPromoValid()) {

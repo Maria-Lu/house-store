@@ -6,8 +6,8 @@ import smallHouse3 from '../images/card/small-house3.png';
 import smallHouse4 from '../images/card/small-house4.png';
 
 import GoodsElement from '../components/GoodsElement.js';
-import Section from '../components/Section.js';
 import { showCartCount } from '../utils/utils';
+import Section from '../components/Section.js';
 
 const goodsElements = [
   {
@@ -57,6 +57,7 @@ const cardTemplateSelector = '.card-template';
 
   cardList.renderItems();
 
-  const cartQty = JSON.parse(localStorage.getItem('totalQty'));
-  
-  showCartCount(cartQty);
+  window.addEventListener('pageshow', function () {
+    const cartQty = JSON.parse(localStorage.getItem('totalQty'));
+    showCartCount(cartQty);
+  });

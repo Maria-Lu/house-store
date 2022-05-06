@@ -1,4 +1,3 @@
-import { locale } from 'core-js';
 import Element from './Element.js';
 
 export default class CartElement extends Element {
