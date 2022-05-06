@@ -1,0 +1,1 @@
+(()=>{"use strict";window.addEventListener("pageshow",(function(){var e,t;e=JSON.parse(localStorage.getItem("totalQty")),(t=document.querySelector(".header__counter")).textContent=e,e?t.classList.add("header__counter_visible"):t.classList.remove("header__counter_visible")}))})();
